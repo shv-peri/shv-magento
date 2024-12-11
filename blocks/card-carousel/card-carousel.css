@@ -1,0 +1,113 @@
+ .dynamic-card-block {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .dynamic-cards-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dynamic-cards-wrapper {
+    display: flex;
+    gap: 16px;
+    overflow-x: overlay;
+    scroll-behavior: smooth;
+    padding: 16px 0;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  
+  .dynamic-card {
+    flex: 0 0 calc((100% - 48px) / 4); 
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0 0 0 /10%);
+    padding: 16px;
+    text-align: center;
+    min-height: 200px; /* Ensure minimum height */
+    max-height: 350px; /* Limit maximum height */
+  }
+  
+  .dynamic-card img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .view-details {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 34px;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    margin: 16px auto 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  h3{
+    font-size: 19px;
+  }
+  
+  /* Dots Container */
+ .carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    gap: 8px;
+  }
+  
+  /* Individual Dot */
+  .carousel-dot {
+    width: 24px;
+    height: 24px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-dot.active {
+    background-color: var(--text-color);
+  }
+  
+  .carousel-prev {
+    left: 10px;
+  }
+  
+  .carousel-next {
+    right: 10px;
+  }
+  
+
+  @media (width> 480px) and (width < 900px) {
+    .dynamic-card {
+      flex: 0 0 calc((100% - 16px) / 2); /* Show 2 cards on small screens */
+    }
+
+    .carousel-dots{
+      display: none;
+    }
+  }
+
+  @media (width >= 300px) and (width< 480px) {
+    .dynamic-card {
+      flex: 0 0 calc((25% - 4px) / 1);
+    }
+
+    .carousel-dots{
+      display: none;
+    }
+  }
+  
+  
