@@ -9,12 +9,60 @@ footer .footer > div {
   padding: 40px 24px 24px;
 }
 
-footer .footer p {
+footer .footer ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  padding: 0;
   margin: 0;
+  flex-wrap: wrap;
+  text-align: left;
 }
 
-@media (width >= 900px) {
+footer .footer ul > li {
+  flex: 1;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+footer .footer ul > li > ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (width < 600px) {
+  footer .footer ul {
+    flex-direction: row; 
+    align-items: flex-start;
+  }
+
+  footer .footer ul > li {
+    min-width: 40%;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+  footer .footer > div {
+    padding: 24px 16px; 
+  }
+}
+
+/* Adjustments for larger screens */
+@media (width > 900px) {
   footer .footer > div {
     padding: 40px 32px 24px;
+  }
+
+  footer .footer ul {
+    justify-content: space-between;
+  }
+
+  footer .footer ul > li {
+    min-width: 10%;
+    margin-bottom: 16px;
   }
 }

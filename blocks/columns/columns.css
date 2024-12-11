@@ -17,13 +17,119 @@
 
 .columns > div > .columns-img-col img {
   display: block;
+  margin: 0 auto; 
+}
+
+
+.columns-bg-image .columns > div >  div p,
+.columns-single-image.columns-container .columns > div p
+{
+  text-align: center;
+  font-size: 1rem;
+}
+
+.columns-bg-image .columns > div >  div h2 {
+  font-size: 60px;
+  width: 220px;
+}
+
+.columns-single-image.columns-container .columns > div h2{
+  text-align: center;
+  width: 100%;
+  letter-spacing: 5px;
+  font-size: 55px;
+  font-weight: 100;
+}
+
+.columns-single-image.columns-container .columns > div h3{
+  letter-spacing: 1px;
+  margin-top: 10px;
+  font-size: 43px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.columns-bg-image .columns > div >  div a{
+  color: var(--background-color);
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.columns-single-image.columns-container .columns > div a
+{
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--text-color);
+}
+
+.columns-single-image.columns-container  .columns > div{
+  width: 100%;
+}
+
+.columns-bg-image .columns > div >  div:not(.columns-img-col){
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 500px;
+    max-width: 230px;
+    padding: 30px;
+    width: auto;
+    max-height: 520px;
+    background-color: var(--banner-color);
+    color: var(--background-color);
+    text-align: center;
+    justify-content: space-between;
+}
+
+.columns-single-image.columns-container  .columns > div > div:not(.columns-img-col){
+  width: 65%;
+  padding: 50px 30px;
+  flex: none;
+}
+
+.columns-single-image.columns-container  .columns  .columns-img-col{
+  width: 35%;
+}
+
+.columns-single-image.columns-container  .columns  .columns-img-col img{
+  height: 320px;
+}
+
+@media (width>300px) and (width < 800px){
+  .columns-bg-image .columns > div >  div:not(.columns-img-col){
+    width: 300px;
+    min-height: 300px;
+    margin: 30px;
+  }
+
+  .columns-single-image.columns-container .columns > div > div:not(.columns-img-col) {
+    width: 100%;
+    padding: 10px;
+    flex: none;
+  }
+
+  .columns-single-image.columns-container  .columns  .columns-img-col{
+    width: 100%;
+    order: 1;
+  }
+
+  .columns-bg-image .columns > div > div h2{
+    margin-top: 1rem;
+    font-size: 2.125rem;
+    line-height: 1.25;
+    font-weight: 100;
+    text-align: center;
+  }
 }
 
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: 24px;
   }
 
   .columns > div > div {
