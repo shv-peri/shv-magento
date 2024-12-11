@@ -9,14 +9,31 @@ footer .footer > div {
   padding: 40px 24px 24px;
 }
 
-footer .footer ul {
-  list-style: none;
+footer ul {
   display: flex;
+  list-style: none;
   width: 100%;
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
   text-align: left;
+}
+ 
+footer ul li{
+  list-style-type: none;
+  min-width: 18%;
+  font-weight: 600;
+}
+ 
+footer ul ul {
+  flex-direction: column;
+  padding-inline-start: 0;
+}
+ 
+footer ul ul li{
+  font-weight: 100;
+  margin-top: .8em;
+  margin-bottom: .25em;
 }
 
 footer .footer ul > li {
@@ -30,7 +47,18 @@ footer .footer ul > li > ul {
   display: flex;
   flex-direction: column;
   align-content: flex-start;
-  margin-top: 10px;
+}
+
+footer .footer-col-image{
+  border-top: 1px solid rgb(200 209 228);
+}
+
+footer .footer-col-image ul > li > ul {
+  flex-direction: row;
+}
+
+footer .footer-col-image .icon{
+  width: 140px;
 }
 
 /* Responsive adjustments for smaller screens */
@@ -49,6 +77,13 @@ footer .footer ul > li > ul {
   footer .footer > div {
     padding: 24px 16px; 
   }
+
+  footer .footer-col-image ul > li > ul{
+    flex-direction: column-reverse;
+    width: 100%;
+    align-items: center;
+    word-break: break-all;
+  }
 }
 
 /* Adjustments for larger screens */
@@ -64,5 +99,10 @@ footer .footer ul > li > ul {
   footer .footer ul > li {
     min-width: 10%;
     margin-bottom: 16px;
+  }
+
+  footer .footer-col-image ul > li > ul {
+    margin-top: 20px;
+    min-width: 40%;
   }
 }
